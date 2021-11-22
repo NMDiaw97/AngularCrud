@@ -1,0 +1,29 @@
+<div class="panel pane-primary">
+    <div class="panel-heading">
+        <h2>liste des employes</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Prenom</th>
+                    <th>Experience</th>
+                    <th>specialité</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let employee of employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.prenom}}</td>
+                    <td>{{employee.specialite}}</td>
+                    <td>{{employee.experience}}</td>
+                    <td><button (click)="deleteEmploye(employee.id)"class="btn btn-danger">Delete></button>
+                        <button (click)="employeeDetails(employee.id)"class="btn btn-info" margin-left: 10px>Details></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
